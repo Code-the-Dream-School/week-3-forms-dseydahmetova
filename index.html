@@ -1,5 +1,5 @@
 <DOCTYPE! HTML>
-<html >
+<html>
   <head>
     <meta charset="utf-8">
     <title>Forms</title>
@@ -22,20 +22,22 @@
         <button type="button" class="btn btn-primary btn-lg border-info text-info bg-dark" data-toggle="modal" data-target="#application">Application</button>
       </div>
     </div> <!---/jumbotron-->
+
   <!---------------------------
      FORM MODAL RESERVATION
   ----------------------------->
-
-    <!---reservation-->
     <div class="modal" id="reservation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
+         <!------modal body---->
         <div class="modal-body">
-         <!------reservation form---->
+        <!------name input---->
          <form class="needs-validation" novalidate>
           <div class="form-row">
             <div class="col-md-6 mb-3">
@@ -44,6 +46,7 @@
                 Please provide your name.
               </div>
             </div>
+            <!------last name input---->
             <div class="col-md-6 mb-3">
               <input type="text" class="form-control" id="last-name"  pattern="[A-Za-z]{1,}" placeholder="Last name" required>
               <div class="invalid-feedback">
@@ -51,6 +54,7 @@
               </div>
             </div>
           </div>
+           <!------phone number input---->
             <div class="form-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1" > 
@@ -62,6 +66,7 @@
               </div>
             </div>
             </div>
+             <!------email address input---->
               <div class="form-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">
@@ -73,7 +78,7 @@
                 </div>
                 </div>
             </div>
-
+             <!------date calendar---->
             <div class="form-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">
@@ -85,6 +90,7 @@
                 </div>
               </div>
             </div>
+             <!------clock time input---->
             <div class="form-row">
               <div class="col-md-6 mb-3">
                <div class="input-group-prepend">
@@ -127,67 +133,42 @@
                 Please provide a valid time.
               </div>
             </div>
+             <!------number of people input---->
             <div class="col-md-6 mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">
                   <img src="../week-3-forms-dseydahmetova/icons/person.svg"  alt="person"/>
                 </span>
-                  <select id="time" class="custom-select" required>
-                    <option selected value="1">1 person</option>
-                    <option value="2">2 people</option>
-                    <option value="3">3 people</option>
-                    <option value="4">4 people</option>
-                    <option value="5">5 people</option>
-                    <option value="6">6 people</option>
-                    <option value="7">7 people</option>
-                    <option value="8">8 people</option>
-                    <option value="9">9 people</option>
-                    <option value="10">10 people</option>
-                    <option value="11">11 people</option>
-                    <option value="12">12 people</option>
-                    <option value="13">13 people</option>
-                    <option value="14">14 people</option>
-                    <option value="15">15 people</option>
-                    <option value="16">16 people</option>
-                    <option value="17">17 people</option>
-                    <option value="18">18 people</option>
-                    <option value="19">19 people</option>
-                    <option value="20">20 people</option>
+                  <select id="person" class="custom-select" required>
                  </select>
                 <div class="invalid-feedback">
                   Please provide a valid time.
                 </div>
               </div>
               </div>
-            </div><!------/last form-row---->
+            </div>
           </div>  <!------/modal body---->
           <div class="modal-footer justify-content-center">
             <button class="btn btn-primary btn-lg border-info text-info bg-light" type="submit">Reserve</button>
           </div>
-              </form> <!------/reservation form---->
-     </div>
+      </form> 
+    </div>
   </div>
   </div>
-<!---/reservation-->
-
-
-
-
-
  <!---------------------------
      FORM MODAL APPLICATION
   ----------------------------->
-
-    <!---application-->
     <div class="modal" id="application" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header justify-content-center">
             <h5 class="modal-title" id="exampleModalLabel">We are happy that you want to be part of our team</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-  
           <div class="modal-body">
-           <!------application form---->
+           <!------name input---->
            <form class="needs-validation" novalidate>
             <div class="form-row">
               <div class="col-md-6 mb-3">
@@ -197,6 +178,7 @@
                   Please provide your name.
                 </div>
               </div>
+               <!------last-name input---->
               <div class="col-md-6 mb-3">
                 <label for="last-name" class="col-form-label">Last name</label>
                 <input type="text" class="form-control" id="last-name"  pattern="[A-Za-z]{1,}" required>
@@ -204,7 +186,7 @@
                   Please provide your last name.
                 </div>
               </div>
-           
+               <!-----email address input---->
             <div class="col-md-6 mb-3">
               <label for="email" class="col-form-label">Email address</label>
                   <input type="email" id="email"  class="form-control" placeholder="name@example.com" required>
@@ -212,7 +194,7 @@
                      Please provide your email.
                 </div>
                 </div>
-           
+                 <!------phone number input---->
             <div class="col-md-6 mb-3">
               <label for="phone" class="col-form-label">Phone</label>
                     <input type="text" id="phone" class="form-control" pattern="[0-9]{10}" placeholder="Format: 1234567890" required>
@@ -221,7 +203,7 @@
                 </div>
               </div>
             </div>
-
+             <!------positiion input---->
              <div class="form-group">
               <label for="role">Position Aplied</label>
               <select class="custom-select" id="role" required>
@@ -235,7 +217,7 @@
                 Please select aplied position.
               </div>
             </div>
-
+             <!------radio butttons for job type---->
             <div class="custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="full-time"  name="radio-stacked" required>
               <label class="custom-control-label" for="full-time">Full-time</label>
@@ -247,7 +229,7 @@
                 You must choose job-type.
               </div>
             </div>
-
+             <!------textbox---->
             <div class="form-group">
               <label for="message-text" class="col-form-label">What are your workplace skills?</label>
               <textarea class="form-control" id="message-text" required></textarea>
@@ -255,9 +237,7 @@
                   Please provide your skills.
                   </div>
                 </div>
-
-
-
+                 <!------upload files button---->
                 <div class="file-field">
                   <label  for="customFile">Upload your resume and list of references:</label>  
                   <input type="file" class="form-control-file" name='files[]' id="customFile" multiple required>
@@ -265,45 +245,14 @@
                       Please upload files.
                       </div>
                   </div>
-                 
-                         
-                 
-                  </div>  <!------/modal body---->
+                 </div>  <!------/modal body---->
                <div class="modal-footer justify-content-between">
                     <button class="btn btn-primary btn-lg border-info text-info bg-light" type="submit">Send</button>
-                 </div>
-
-                 
-                      </form> <!------/reservation form---->
-             </div>
-          </div>
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
+        </form> 
+     </div>
+  </div>
+</div>
 
 <script>
   //Display Only Date till today //
@@ -317,16 +266,10 @@
       onClose: function (selectedDate) {
         $('#test2').datepicker("option", "minDate", selectedDate);
       }
-      
     });
   });
- 
   </script>
-
-
-
-        
-        <script>
+  <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
           'use strict';
@@ -347,9 +290,9 @@
         })();
         </script>
 
- 
+ <script src="form.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
 
